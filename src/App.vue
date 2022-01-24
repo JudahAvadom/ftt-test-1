@@ -1,28 +1,60 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <Navbar />
+    <Promo />
+    <Events />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import Navbar from './components/Navbar.vue';
+import Promo from './components/Promo.vue'
+import Events from './components/Events.vue';
+
 
 export default {
   name: 'App',
+
   components: {
-    HelloWorld
-  }
-}
+    Navbar,
+    Promo,
+    Events
+  },
+
+  data: () => ({
+  }),
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
+  @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+  @import './styles/index.scss';
+
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nanum Gothic', sans-serif;
+  }
+
+  ul, ol {
+    list-style: none;
+  }
+
+  h1 {
+    font-size: $h1-font-size;
+  }
+
+  h2 {
+    font-size: $h2-font-size;
+  }
+
+  h3 {
+    font-size: $h3-font-size;
+  }
+
+  button {
+    font-size: $button-font-size;
+    font-weight: $button-font-weight;
+  }
 </style>

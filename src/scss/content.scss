@@ -1,0 +1,98 @@
+@import '../styles/index.scss';
+
+.promo {
+    height: 100vh;
+
+    .outer {
+        overflow: hidden;
+
+        .inner 
+            > i:nth-child(1) {
+                background-image: url('../img/mountain.jpg');
+                background-size: cover;
+                width: 500px;
+                height: 570px;
+                border-radius: 50%;
+            }
+            
+            .bottom {
+                margin-top: -680px;
+                margin-bottom: -22px;
+
+                &.right {
+                    background-image: url('../img/mountain.jpg');
+                    background-size: cover;
+                    width: 500px;
+                    height: 570px;
+                    border-radius: 50%;
+                    @media screen and (max-width:600px) {
+                        display: none;
+                    }
+                }
+            }
+
+            .top {
+                margin-top: -245px;
+                &.left {
+                    @media screen and (max-width:600px) {
+                        margin-left: -54px;
+                        margin-top: -75%;
+                    }
+                }
+            }
+
+            .left {
+                float: left;
+                margin-left: -230px;
+            }
+
+            .right {
+                float: right;
+                margin-right: -230px;
+            }
+
+            .content {
+                background-color: $primary;
+                min-height: 120vh;
+        
+                .info {
+                    padding-top: 5%;
+                    color: #fff;
+
+                    @media screen and (max-width:600px) {
+                        padding-left: 13%;
+                    }
+
+                    button {
+                        padding-top: 5px;
+                        padding: 8px;
+                        margin-right: 10px;
+
+                        &.suscribe-btn {
+                            border: 1px solid $secondary;
+                            background-color: $secondary;
+                            border-radius: 9px;
+                            color: $primary;
+                        }
+
+                        &.info-btn {
+                            border: 1px solid $tertiary;
+                            background-color: $tertiary;
+                            border-radius: 9px;
+                            color: $primary;
+                        }
+                    }
+
+                }
+
+                .lorem {
+                    color: $white;
+                    p {
+                        padding-right: 16%;
+                    }
+                }
+                
+            }
+        }
+
+}
